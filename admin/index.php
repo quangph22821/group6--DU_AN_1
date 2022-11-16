@@ -36,10 +36,14 @@ if (isset($_GET['act'])) {
    
     // đây là của phòng
     case 'sua':
-      if(isset($_POST['sua']) && ($_POST['sua'])){
+      if(isset($_POST['update']) && ($_POST['update'])){
+        $id = $_POST['id'];
         $name_room = $_POST['name_room'];
         update_loaiphong($id, $name_room);
+        
       }
+      $id = $_GET['id'];
+      $lp = load_loaiphong($id);
       $listloaiphong = loadall_loaiphong();
       include 'loaiphong/sua.php';
       break;

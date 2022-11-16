@@ -24,6 +24,7 @@ function load_loaiphong($id){
     return $lp;
 }
 function update_loaiphong($id, $name_room){
-    $sql = "UPDATE room_gallary SET name = '$name_room' where id = '$id'";
+    $sql = "UPDATE room_gallary SET name_room = '$name_room' where id = '$id'";
     pdo_execute($sql);
+    
 }
