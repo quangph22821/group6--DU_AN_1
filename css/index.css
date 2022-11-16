@@ -1,0 +1,429 @@
+@font-face {
+    font-family: aa;
+    src: url("../font/Roboto-Light.ttf");
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: aa;
+}
+.container{
+    width: 100%;
+    margin: auto;
+}
+header{
+    margin-bottom: 48px;
+}
+.logo-menu{
+    margin-top: -480px;
+    display: flex;
+    justify-content: space-between;
+}
+.menu{
+    padding-top: 12px;
+}
+ul li{
+    display: inline;
+}
+ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: aliceblue;
+    font-size: 18px;
+    margin-left: 12px;
+    margin-right: 12px;
+}
+ a:hover{
+    color: #AB8A62;
+}
+.booking{
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+    
+}
+.booking button{
+    display: inline;
+    width: 150px;
+    height: 60px;
+    border: none;
+    background-color: #AB8A62;
+    border-radius: 50px;
+  
+}
+.booking button a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+    font-size: 20px;
+    padding: 10px;
+    text-align: center;
+
+}
+.main-content{
+    margin-top: 100px;
+}
+.main_1{
+    margin: 80px;
+    display: flex;
+    justify-content: center;
+}
+.title{
+    margin-right: 32px;
+}
+.title span{
+    font-size: 32px;
+    color: #000;
+    margin-bottom: 12px;
+}
+.title_p{
+    font-size: 48px;
+    margin-bottom: 12px;
+}
+.title_system{
+    font-size: 20px;
+    color: #222;
+
+}
+.main_2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 32px;
+}
+.img_2{
+    margin-top: -32px;
+}
+.products_1{
+    display: flex;
+    justify-content: center;
+}
+.gia{
+    overflow: hidden;
+}
+.gia_phong{
+    overflow: hidden;
+}
+.midle h6{
+    transform: translateY(100px);
+    font-size: 18px;
+}
+.midle h6 a{
+    text-decoration: none;
+    color: #fff;
+    padding-left: 100px;
+}
+.img {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    margin-left: 12px;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+.room:hover .img {
+    opacity: 0.6;
+}
+.room:hover .gia{
+    transform: translateY(-40px);
+    transition: 0.5s ;
+}
+.room:hover .midle{
+    transform: translateY(-98px);
+    transition: 0.5s ;
+}
+.rooms:hover .img {
+    opacity: 0.6;
+}
+.rooms:hover .gia_phong{
+    transform: translateY(-10px);
+    transition: 0.5s ;
+}
+
+.rooms:hover .midle{
+    transform: translateY(-98px);
+    transition: 0.5s ;
+}
+.main{
+    margin-top: -12px;
+    background-color: beige;
+}
+.main_3{
+    padding-top: 12px;
+    margin-left: 50px;
+}
+.main_3 h3{
+    margin-top: 12px;
+    color: #666;
+}
+.main_3 p{
+    font-size: 48px;
+    color: #222;
+    margin-bottom: 32px;
+}
+.book button{
+    background: none;
+    width: 100px;
+    height: 30px;
+    font-size: 18px;
+    margin-left: 360px;
+    border: 1px solid white;
+    color: white;
+    position: absolute;
+    margin-top: -440px;
+    transform:  translateX(-50%) translateY(-50%) rotate(-90deg);
+}
+.gia{
+    color: white;
+    margin-left: 12px;
+    font-size: 30px;
+    margin-left: 30px;
+    margin-top: -100px;
+    position: absolute;
+}
+.products_2{
+    margin-top: 32px;
+    display: flex;
+    justify-content: center;
+}
+.books button{
+    background: none;
+    width: 100px;
+    height: 30px;
+    font-size: 18px;
+    margin-left: 560px;
+    border: 1px solid white;
+    color: white;
+    position: absolute;
+    margin-top: -280px;
+    transform:  translateX(-50%) translateY(-50%) rotate(-90deg);
+}
+.gia_phong{
+    color: white;
+    margin-left: 32px;
+    font-size: 30px;
+    margin-top: -100px;
+    position: absolute;
+}
+.list_title{
+    opacity: 1;
+    display: block;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+    
+}
+.list{
+    overflow: hidden;
+}
+.list_title:hover a{
+    opacity: 0.6;
+}
+.list_title img{
+    width: 280px;
+    height: 200px;
+    margin-left: 24px;
+}
+.list_title_news p{
+    text-transform: uppercase;
+    text-align: center;
+    color: black;
+    transform: translateY(100px);
+    font-size: 18px;
+}
+button{
+    cursor: pointer;
+}
+.list_title:hover .list_title_news{
+    transform: translateY(-200px);
+    transition: 0.5s ;
+}
+.list{
+    margin-left: 50px;
+    display: flex;
+    margin-bottom: 12px;
+    justify-content: center;
+}
+.kham_pha{
+    margin-top: 20px;
+    justify-content: center;
+    background-image: url("./img/R.jpeg");
+}
+.kham_pha h2{
+    text-align: center;
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+.dich_vu_system{
+    margin-left: 200px;
+}
+.dich_vu_system h3{
+    margin-top: 12px;
+    color: #666;
+}
+.dich_vu_system p{
+    font-size: 48px;
+    color: #222;
+    margin-bottom: 32px;
+}
+.dich_vu_list{
+    display: flex;
+    justify-content: center;
+    
+}
+.icon{
+    font-size: 24px;
+}
+.dich_vu_list_title{
+    padding: 10px;
+    border: 1px solid #f1eeeb;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    height: 200px;
+    width: 250px;
+}
+.dich_vu_list_title{
+    padding: 12px;
+}
+.text h5{
+    font-size: 24px;
+    font-weight: 400;
+    padding-top: 12px;
+}
+.text p{
+    font-size: 15px;
+    line-height: 24px;
+    color: #666;
+}
+.footer{
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+    color: white;
+    height: 150px;
+    padding-top: 12px;
+}
+.footer_1{
+    margin-left: 32px;
+    margin-right: 48px;
+    width: 350px;
+}
+.footer_1 p{
+    margin-top: 12px;
+    color: #adadad;
+    line-height: 20px;
+}
+.footer_1 h2{
+    font-size: 18px;
+}
+.footer_2{
+    width: 350px;
+}
+.footer_2 h2{
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+.copy{
+    background-color: black;
+    color: white;
+    height: 50px;
+    padding-top: 14px;
+    font-size: 18px;
+    text-align: center;
+}
+.link a{
+    margin-top: 12px;
+    padding: 0 5px;
+    color: #fff;
+    font-size: 15px;
+}
+.main_sigin{
+    margin-left: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 100px;
+}
+.tin_chinh h1{
+    margin-bottom: 24px;
+}
+.aaa{
+    margin-bottom: 24px;
+}
+.aaa i{
+    padding-right: 12px;
+    font-size: 35px;
+    color: #AB8A62;
+}
+.aaa p{
+    margin-left: 48px;
+    margin-bottom: 6px;
+}
+.cho{
+    margin-top: -38px;
+}
+.name label{
+    margin-bottom: 8px;
+}
+.name input{
+    width: 80%;
+    height: 35px;
+    margin: 12px 0;
+    padding: 0 12px;
+}
+.nhap button{
+    width: 20%;
+    height: 40px;
+    margin-left: 27%;
+    border: none;
+    background: #AB8A62;
+    text-transform: uppercase;
+    font-size: medium;
+    color: #fff;
+    margin-bottom: 12px;
+}
+.dangky{
+    margin-left: 18%;
+    margin-bottom: 12px;
+    color: #666;
+    font-size: 18px;
+}
+.dang_kyy{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.dang_ky{
+    margin-left: 10%;
+}
+.logins label{
+    margin-bottom: 8px;
+    color: #666;
+}
+.logins input{
+    width: 80%;
+    height: 35px;
+    margin: 12px 0;
+    padding: 0 12px;
+}
+.nhaps button{
+    width: 20%;
+    height: 40px;
+    margin-left: 35%;
+    border: none;
+    background: #AB8A62;
+    text-transform: uppercase;
+    font-size: medium;
+    color: #fff;
+    margin-bottom: 12px;
+}
+.dangky a{
+    text-decoration: none;
+    color: #000;
+    
+}
+.signin h2{
+    color: #666;
+    margin-bottom: -12px;
+}
+
+
