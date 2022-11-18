@@ -33,20 +33,23 @@ if (isset($_GET['act'])) {
       $listloaiphong = loadall_loaiphong();
       include 'loaiphong/danhsach.php';
       break;
-   
-    // đây là của phòng
+
     case 'sua':
       if(isset($_POST['update']) && ($_POST['update'])){
         $id = $_POST['id'];
         $name_room = $_POST['name_room'];
         update_loaiphong($id, $name_room);
-        
+        echo "CẬP NHẬT THÀNH CÔNG";
       }
       $id = $_GET['id'];
       $lp = load_loaiphong($id);
       $listloaiphong = loadall_loaiphong();
+     
       include 'loaiphong/sua.php';
       break;
+   
+    // đây là của phòng
+    
     
     case 'addphong':
       include 'phong/them.php';

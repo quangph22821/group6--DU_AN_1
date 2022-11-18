@@ -1,5 +1,5 @@
 
-<form action="index.php?act=sua&id=<?=$value['id']?>" method='post'>
+<form action="index.php?act=sua&id=<?=$lp['id']?>" method='post'>
 
         <input type="hidden" name="id" value="<?=$lp['id']?>">
 
@@ -10,9 +10,7 @@
         </div>
 
         <div class="btn">
-            <button type="submit" name="update">
-                Cập nhật
-            </button>
+          <input type="submit" value="Cập nhật" name="update">
             <input type="reset" value="NHẬP LẠI">
             <a href="index.php?act=danhsach"><input type="button" value="DANH SÁCH"></a>
         </div>
