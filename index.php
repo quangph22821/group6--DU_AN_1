@@ -1,6 +1,6 @@
 <?php 
 session_start();
-include "./model/pdo.php";
+include "./model/connect.php";
 include "./model/taikhoan.php";
 include_once "views/header.php";
 // controller
@@ -22,7 +22,20 @@ if (isset($_GET['act'])) {
     }
     include 'views/dangnhap.php';
     break;
-    
+    case 'dangky':
+      if(isset($_POST['dang_ky']) && ($_POST['dang_ky'])){
+        $name = $_POST['name'];
+        $address = $_POST['address'];
+        $email = $_POST['email'];
+        $telephone = $_POST['telephone'];
+        $user_name = $_POST['user_name'];
+        $password = $_POST['password'];
+        dang_ky($name, $address, $email, $telephone, $user_name, $password);
+         
+        } 
+      include 'views/dangky.php';
+      break;
+
     case 'dangxuat':
       session_unset();
       header('location:index.php');

@@ -1,4 +1,4 @@
-<!-- <link rel="stylesheet" href="../css/index.css">
+<link rel="stylesheet" href="../css/index.css">
      <main>
             <div class="dang_ky">
                 <h2 style="margin: 24px 0 24px 35%; color: #222;">Đăng ký thành viên</h2>
@@ -39,4 +39,4 @@
                     </div>
                 </form>
             </div>
-        </main> -->
+        </main>
