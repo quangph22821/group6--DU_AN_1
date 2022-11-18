@@ -1,5 +1,5 @@
 <!--  -->
-<link rel="stylesheet" href="../css/index.css">
+<link rel="stylesheet" href="./css/index.css">
     <main>
     <div class="main_sigin">
         <div class="tin_chinh">
@@ -21,23 +21,96 @@
             </div>
         </div>
         <div class="signin">
+        <?php
+            if(isset($_SESSION['user_name'])){
+                extract($_SESSION['user_name']);
+            ?>
+            <div class="chao">
+                <h2 style="margin-bottom: 12px;">Xin chào <?= $user_name ?></h2>
+            </div>
+            <div class="chao">
+                <?php 
+                    if($role == 0){
+                ?>
+                <div class="ccc">
+                <li><a href="./admin/index.php">Đăng nhập Admin</a></li>
+                </div>
+                <?php } ?>
+                <div class="ccc">
+                    <li><a href="./index.php?act=quen_mat_khau">Quên mật khẩu</a></li>
+                </div>
+                <div class="ccc">
+                    <li><a href="./index.php?act=edit_tai_khoan">Cập nhật tài khoản</a></li>
+                </div>
+               <div class="ccc">
+                    <li><a href="./index.php?act=dangxuat">Đăng xuất</a></li>
+               </div>
+            </div>
+            <style>
+                .chao{
+                list-style-type: none;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+            }
+            .chao li a{
+                
+                text-decoration: none;
+                color: #fff;
+                background-color: #AB8A62;
+                margin-top: 12px;
+            
+            }
+            .ccc{
+                cursor:pointer;
+                width: 70%;
+                padding: 12px;
+                text-align: center;
+                height: 40px;
+                border: none;
+                background: #AB8A62;
+                text-transform: uppercase;
+                font-size: medium;
+                color: #fff;
+                margin-bottom: 12px;
+                margin-top: 12px;
+            }
+            </style>
+            <?php
+                }else{
+
+            ?>
             <h2>Đăng nhập</h2><br>
-            <form action="" method="post">
+            <form action="./index.php?act=dangnhap" method="post">
                 <div class="name">
                     <label for="">Tên đăng nhập</label><br>
-                    <input type="text" placeholder="Tên đăng nhập*">
+<input type="text" name="user_name" placeholder="Tên đăng nhập*">
                 </div>
                 <div class="name">
                     <label for="">Password</label><br>
-                    <input type="password" placeholder="Password*">
+                    <input type="password" name="password" placeholder="Password*">
                 </div>
                 <div class="nhap">
-                    <button>Đăng nhập</button>
+                   <input  type="submit" name="dang_nhap" value="Đăng nhập" class="btn"  style=" cursor:pointer;">
                 </div>
+                <style>
+                    .nhap .btn{
+                        width: 20%;
+                        height: 40px;
+                        margin-left: 27%;
+                        border: none;
+                        background: #AB8A62;
+                        text-transform: uppercase;
+                        font-size: medium;
+                        color: #fff;
+                        margin-bottom: 12px;
+                    }
+                </style>
                 <div class="dangky">
-                    <span>Bạn chưa có tài khoản ?<a href="views/dangky.php">Đăng ký</a></span>
+                    <span>Bạn chưa có tài khoản ?<a href="./index.php?act=dangky">Đăng ký</a></span>
                 </div>
             </form>
         </div>
     </div>
+    <?php
+                }?>
 </main>

@@ -183,7 +183,7 @@ ul li a{
     position: absolute;
 }
 .products_2{
-    margin-top: 32px;
+margin-top: 32px;
     display: flex;
     justify-content: center;
 }
@@ -371,17 +371,6 @@ button{
     margin: 12px 0;
     padding: 0 12px;
 }
-.nhap button{
-    width: 20%;
-    height: 40px;
-    margin-left: 27%;
-    border: none;
-    background: #AB8A62;
-    text-transform: uppercase;
-    font-size: medium;
-    color: #fff;
-    margin-bottom: 12px;
-}
 .dangky{
     margin-left: 18%;
     margin-bottom: 12px;
@@ -405,8 +394,13 @@ button{
     margin: 12px 0;
     padding: 0 12px;
 }
-.nhaps button{
+.nhaps{
+    cursor:pointer;
+}
+.nhaps .btn{
+   
     width: 20%;
+    text-align: center;
     height: 40px;
     margin-left: 35%;
     border: none;
@@ -415,6 +409,33 @@ button{
     font-size: medium;
     color: #fff;
     margin-bottom: 12px;
+}
+.chao{
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.chao li a{
+    
+    text-decoration: none;
+    color: #fff;
+    background-color: #AB8A62;
+    margin-top: 12px;
+   
+}
+.ccc{
+    cursor:pointer;
+    width: 70%;
+    padding: 12px;
+    text-align: center;
+    height: 40px;
+    border: none;
+    background: #AB8A62;
+    text-transform: uppercase;
+    font-size: medium;
+    color: #fff;
+    margin-bottom: 12px;
+    margin-top: 12px;
 }
 .dangky a{
     text-decoration: none;
@@ -425,5 +446,3 @@ button{
     color: #666;
     margin-bottom: -12px;
 }
-
-
