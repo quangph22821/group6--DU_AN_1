@@ -37,19 +37,25 @@ if (isset($_GET['act'])) {
       break;
 
     case 'dangxuat':
-      session_unset();
-      header('location:index.php');
-      break;
+        session_unset();
+        header('location:index.php');
+        break;
 
     //  end đăng nhập đăng kí
     case 'phongnghi':
-      include 'views/phongnghi.php';
-      break;
+        include 'views/phongnghi.php';
+        break;
+    case 'chitietphong':
+        include 'views/chitiet_phong.php';
+        break;
     case 'amthuc':
         include 'views/amthuc.php';
         break;
     case 'tintuc':
       include 'views/tintuc.php';
+      break;
+    case 'chitiettintuc':
+      include 'views/chitiet_tintuc.php';
       break;
     case 'uudai':
       include 'views/uudai.php';

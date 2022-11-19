@@ -11,7 +11,7 @@ if (isset($_GET['act'])) {
   switch ($act) {
     // đây là của loại phòng
     case 'them':
-        
+
         if(isset($_POST['themmoi']) && ($_POST['themmoi'])){
           $name_room = $_POST['name_room'];
           insert_loai_phong($name_room);

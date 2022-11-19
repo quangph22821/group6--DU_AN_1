@@ -446,6 +446,7 @@ button{
     color: #666;
     margin-bottom: -12px;
 }
+<<<<<<< HEAD
 
 /* css loại phòng */
 .add_loaiphong{
@@ -479,3 +480,78 @@ form .form-group{
     padding: 0 5px;
     border-radius: 5px;
 }
+=======
+/* CSS tin tức */
+.tintuc_list{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 32px;
+    margin: 5%;
+}
+.tintuc_news img{
+    width: 100%;
+}
+.tintuc_news h2{
+    margin: 12px 0;
+    font-size: 14px;
+    color: #AB8A62;
+}
+.tintuc_news h3{
+    margin-bottom: 12px;
+    font-size: 16px;
+    color: #222;
+}
+.tintuc_news p{
+    color: #666;
+    line-height: 20px;
+    font-size: 14px;
+    margin-bottom: 24px;
+}
+.tintuc_chitiet a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    padding: 12px;
+    background-color: #AB8A62;
+    border-radius: 10px 0 10px 0;
+}
+.tintuc_chitiet a:hover {
+    background-color: #222;
+}
+/* CSS chi tiết tin tức */
+.tintuc_all{
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+.tintuc_lienquan{
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.lienquan_anh img{
+    width: 50%;
+}
+.lienquan_tieude a{
+    margin-top: -12px;
+    font-size: 18px;
+    color: #222;
+    text-decoration: none;
+}
+.chitiet_tintuc{
+    margin: 32px 10%;
+}
+.chitiet_tintuc img{
+    width: 100%;
+    margin: 12px 0;
+}
+.chitiet_tintuc h2{
+    margin-bottom: 12px;
+    font-size: 24px;
+    color: #222;
+}
+.chitiet_tintuc p{
+    line-height: 22px;
+    font-size: 18px;
+    color: #666;
+}
+>>>>>>> cb69d1bdfae3850328440ccfa9492fafbc3b9480
