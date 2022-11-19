@@ -446,3 +446,36 @@ button{
     color: #666;
     margin-bottom: -12px;
 }
+
+/* css loại phòng */
+.add_loaiphong{
+    text-align: center;
+    margin: 40px 400px;
+    background-color: #AB8A62;
+    padding: 20px 10px;
+    border-radius: 25px;
+    box-shadow: 14px 15px 1px #bccdbd;
+}
+.text h1{
+    margin: 10px 0;
+}
+
+form .form-group{
+    font-size: 20px;
+    margin-bottom:10px ;
+}
+
+.form-group .inp{
+    width: 50%;
+    height: 25px;
+    border-radius: 5px;
+    border: none;
+}
+
+.btn input{
+    cursor: pointer;
+    background-color: #222;
+    color: #fff;
+    padding: 0 5px;
+    border-radius: 5px;
+}

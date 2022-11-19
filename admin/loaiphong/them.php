@@ -7,7 +7,7 @@
         <div class="form-group">
             <label for="">Tên loại phòng</label>
             <br>
-            <input type="text" name="name_room" id="">
+            <input type="text" name="name_room" id="" class='inp'>
         </div>
 
         <div class="btn">

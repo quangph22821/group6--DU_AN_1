@@ -1,6 +1,6 @@
 <?php 
 // session_start();
-include "../model/pdo.php";
+include "../model/connect.php";
 include "../model/taikhoan.php";
 include "../model/loaiphong.php";
 include_once "header.php";
@@ -15,9 +15,9 @@ if (isset($_GET['act'])) {
         if(isset($_POST['themmoi']) && ($_POST['themmoi'])){
           $name_room = $_POST['name_room'];
           insert_loai_phong($name_room);
-          $thongbao = "THÊM THÀNH CÔNG";
           
         }
+        
         include "loaiphong/them.php";
         break;
 
