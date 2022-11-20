@@ -3,6 +3,7 @@
 include "../model/connect.php";
 include "../model/taikhoan.php";
 include "../model/loaiphong.php";
+include "../model/phong.php";
 include_once "header.php";
 
 // controller
@@ -51,8 +52,75 @@ if (isset($_GET['act'])) {
     // đây là của phòng
     
     
-    case 'addphong':
-      include 'phong/them.php';
+    case 'addlp':
+      // kiểm tra người dùng bấm hay ko
+      if (isset($_POST['themmoi']) && ($_POST['themmoi'])) {
+        $idlp = $_POST['ID_lp'];
+        $tenphong = $_POST['room_name'];
+        $giaphong = $_POST['price'];
+        $mota = $_POST['description'];
+        $filename = $_FILES['image']['name'];
+        $target_dir = "../upload/";
+        $target_file = $target_dir . basename($_FILES["image"]["name"]);
+        if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
+        } else {
+        }
+        insert_phong($tenphong, $giaphong, $filename, $mota, $idlp);
+        $thongbao = "Thêm Thành Công";
+      }
+      $listloaiphong = loadall_loaiphong();
+      include_once "phong/them.php";
+      break;
+    case 'listphong':
+      if (isset($_POST['listok']) && ($_POST['listok'])) {
+        $kyw = $_POST['kyw'];
+        $idlp = $_POST['ID_lp'];
+      } else {
+        $kyw = "";
+        $idlp = 0;
+      }
+      $listloaiphong = loadall_loaiphong();
+      $listphong = loadall_phong($kyw, $idlp);
+      include_once "phong/danhsach.php";
+      break;
+    case 'xoaphong':
+      if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+        delete_phong($_GET['id']);
+      }
+      $listphong = loadall_phong();
+      include_once "phong/danhsach.php";
+      break;
+
+    case 'suaphong':
+      if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+        $phong = loadone_phong($_GET['id']);
+      }
+      $id = $_GET['id'];
+      $loadonephong = phong1($id);
+      $listloaiphong = loadall_loaiphong();
+      include_once "phong/sua.php";
+      break;
+
+    case 'capnhat':
+      if (isset($_POST['capnhat']) && ($_POST['capnhat'])) {
+        $id = $_POST['id'];
+        $idlp = $_POST['ID_lp'];
+        $tenphong = $_POST['room_name'];
+        $giaphong = $_POST['price'];
+        $mota = $_POST['description'];
+        $filename = $_FILES['image']['name'];
+        $target_dir = "../upload/";
+        $target_file = $target_dir . basename($_FILES["image"]["name"]);
+        if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
+        } else {
+        }
+        update_phong($idlp, $tenphong, $giaphong, $mota, $filename, $id);
+        $thongbao = "Cập Nhật  Thành Công";
+      }
+      $listloaiphong = loadall_loaiphong();
+      $listphong = loadall_phong("", 0);
+      include_once "phong/danhsach.php";
+
       break;
     // đây là của khách hàng
     case 'khachhang':

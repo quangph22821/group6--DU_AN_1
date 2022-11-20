@@ -66,7 +66,7 @@
                         <ul>
                             <li><a href="index.php">Trang chủ</a></li>
                             <li><a href="index.php?act=them">Loại phòng</a></li>
-                            <li><a href="index.php?act=phong">Phòng</a></li>
+                            <li><a href="index.php?act=addlp">Phòng</a></li>
                             <li><a href="index.php?act=khachhang">Tài khoản</a></li>
                             <li><a href="index.php?act=binhluan">Bình luận</a></li>
                             <li><a href="index.php?act=thongke">Thống kê</a></li>
