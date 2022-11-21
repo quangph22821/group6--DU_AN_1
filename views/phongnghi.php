@@ -53,7 +53,8 @@
                         <i class="fa-solid fa-tv"></i>
                         <i class="fa-solid fa-bed"></i>
                         <i class="fa-solid fa-people-group"></i>
-                        <a href="">Chi tiết <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="./index.php?act=chitietphong">Chi tiết <i class="fa-solid fa-arrow-right"></i></a>
+
                     </h6>
                 </div>
             </div>
@@ -77,7 +78,8 @@
                         <i class="fa-solid fa-tv"></i>
                         <i class="fa-solid fa-bed"></i>
                         <i class="fa-solid fa-people-group"></i>
-                        <a href="">Chi tiết <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="./index.php?act=chitietphong">Chi tiết <i class="fa-solid fa-arrow-right"></i></a>
+
                     </h6>
                 </div>
             </div>
@@ -104,7 +106,8 @@
                         <i class="fa-solid fa-tv"></i>
                         <i class="fa-solid fa-bed"></i>
                         <i class="fa-solid fa-people-group"></i>
-                        <a href="">Chi tiết <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="./index.php?act=chitietphong">Chi tiết <i class="fa-solid fa-arrow-right"></i></a>
+
                     </h6>
                 </div>
             </div>
@@ -129,7 +132,7 @@
                         <i class="fa-solid fa-tv"></i>
                         <i class="fa-solid fa-bed"></i>
                         <i class="fa-solid fa-people-group"></i>
-                        <a href="">Chi tiết <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="./index.php?act=chitietphong">Chi tiết <i class="fa-solid fa-arrow-right"></i></a>
                     </h6>
                 </div>
             </div>
@@ -153,7 +156,7 @@
                         <i class="fa-solid fa-tv"></i>
                         <i class="fa-solid fa-bed"></i>
                         <i class="fa-solid fa-people-group"></i>
-                        <a href="">Chi tiết <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="./index.php?act=chitietphong">Chi tiết <i class="fa-solid fa-arrow-right"></i></a>
                     </h6>
                 </div>
             </div>
