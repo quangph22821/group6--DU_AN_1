@@ -70,7 +70,6 @@
             <div class="bookk">
                 <a href=""><input class="ddd" type="submit" value="Đặt phòng" style=" cursor: pointer;
     background-color: #AB8A62;
-    /* width: auto; */
     width: 150px;
     font-size: 18px;
     height: 50px;

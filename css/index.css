@@ -552,3 +552,63 @@ form .form-group{
     font-size: 18px;
     color: #666;
 }
+/* CSS ẩm thực */
+.amthuc_title{
+    text-align: center;
+    margin-bottom: 12px;
+}
+.amthuc_title h3{
+    margin-bottom: 12px;
+    color: #AB8A62;
+}
+.amthuc_title h1{
+    margin-bottom: 12px;
+    color: #222;
+}
+.amthuc_title p{
+    margin-top: 12px;
+    color: #666;
+    margin-bottom: 32px;
+    text-align: center;
+}
+.anh_nha_hang img{
+    width: 400px;
+    height: 300px;
+    padding: 0 32px;
+}
+.list_nhahang{
+    display: flex;
+    text-align: center;
+    background-color: #222;
+    padding-top: 32px;
+    margin-bottom: 32px;
+}
+.nha_hang_news{
+    text-align: center;
+    margin: 32px;
+    color: #fff;
+}
+.nha_hang_news p{
+    margin-top: 12px;
+    line-height: 24px;
+    font-size: 18px;
+}
+.amthuc_main{
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   text-align: center;
+}
+.lienquan_anh img{
+    width: 500px;
+    height: 400px;
+    margin-bottom: 12px;
+    grid-gap: 32px;
+}
+.lienquan_title h2{
+    color: #AB8A62;
+}
+.lienquan_title{
+    margin: 12px 32px;
+    line-height: 24px;
+    color: #666;
+}
