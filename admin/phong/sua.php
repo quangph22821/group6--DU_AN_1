@@ -40,12 +40,12 @@ if (is_file($hinhpath)) {
                     </div>
                     <div class="row mb10">
                         Hình Phòng<br>
-                    <input type="file" name="image" >
-                    <?=$hinh?>
+                    <input type="file" name="image" id="files"  multiple >
+                    <img src="../upload/<?=$phong['image'] ?>" width="123" alt="">
                     </div>
                     <div class="row mb10">
                         Mô Tả<br>
-                    <textarea name="description"  cols="30" rows="10" value="<?=$phong['description']?>"></textarea>
+                    <input  type="text" name="description"  style="width=200px" value="<?=$phong['description']?>">
                     </div>
                   
                     <div class="row mb10">

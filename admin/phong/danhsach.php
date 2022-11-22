@@ -14,7 +14,7 @@ $sql = "SELECT * FROM room_type ORDER BY id DESC";
     <div class="row fromtitle mb">
         <h1>Danh Sách Sản Phẩm</h1>
     </div>
-    <form action="index.php?act=listphong" method="post">
+    <form action="index.php?act=listphong" method="post" >
         <input type="text" name="kyw">
         <select name="ID_lp">
             <option value="0" selected>Tất Cả</option>
