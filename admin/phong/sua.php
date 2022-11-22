@@ -45,7 +45,7 @@ if (is_file($hinhpath)) {
                     </div>
                     <div class="row mb10">
                         Mô Tả<br>
-                    <input  type="text" name="description"  style="width=200px" value="<?=$phong['description']?>">
+                    <input  type="text" name="description"  style=" width=200px; height=300px" value="<?=$phong['description']?>">
                     </div>
                   
                     <div class="row mb10">
