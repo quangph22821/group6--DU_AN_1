@@ -1,4 +1,4 @@
-<!--  -->
+
 <link rel="stylesheet" href="./css/index.css">
     <main>
     <div class="main_sigin">
@@ -26,7 +26,7 @@
                 extract($_SESSION['user_name']);
             ?>
             <div class="chao">
-                <h2 style="margin-bottom: 12px;">Xin chào <?= $user_name ?></h2>
+                <h2 style="margin-bottom: 12px;">Xin chào <?= $name ?></h2>
             </div>
             <div class="chao">
                 <?php 
@@ -83,7 +83,7 @@
             <form action="./index.php?act=dangnhap" method="post">
                 <div class="name">
                     <label for="">Tên đăng nhập</label><br>
-<input type="text" name="user_name" placeholder="Tên đăng nhập*">
+                    <input type="text" name="user_name" placeholder="Tên đăng nhập*">
                 </div>
                 <div class="name">
                     <label for="">Password</label><br>
@@ -92,9 +92,12 @@
                 <div class="nhap">
                    <input  type="submit" name="dang_nhap" value="Đăng nhập" class="btn"  style=" cursor:pointer;">
                 </div>
+                <div class="nhap">
+                   <a href="./index.php?act=quenmatkhau"><input  name="dang_nhap" value="Quên mật khẩu" class="btn"  style=" cursor:pointer;"></a>
+                </div>
                 <style>
                     .nhap .btn{
-                        width: 20%;
+                        width: 25%;
                         height: 40px;
                         margin-left: 27%;
                         border: none;
