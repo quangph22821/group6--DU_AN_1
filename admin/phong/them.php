@@ -34,7 +34,7 @@
             <div class="col">
                 <div class="form-group">
                     <label for="">Hình Ảnh</label>
-                    <input type="file" name="image" placeholder="">
+                    <input type="file" name="image" placeholder=""  multiple>
                 </div>
             </div>
             <div class="col">
