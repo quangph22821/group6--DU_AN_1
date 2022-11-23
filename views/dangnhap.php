@@ -37,7 +37,7 @@
                 </div>
                 <?php } ?>
                 <div class="ccc">
-                    <li><a href="./index.php?act=quen_mat_khau">Quên mật khẩu</a></li>
+                    <li><a href="./index.php?act=quenmatkhau">Quên mật khẩu</a></li>
                 </div>
                 <div class="ccc">
                     <li><a href="./index.php?act=edit_tai_khoan">Cập nhật tài khoản</a></li>
