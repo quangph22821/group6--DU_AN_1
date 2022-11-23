@@ -31,7 +31,7 @@ $sql = "SELECT * FROM room_type ORDER BY id DESC";
     <div class="row fromcontent">
         <div class="row mb10 fromdsloai">
 
-            <table>
+            <table border='1' >
                 <tr>
 
                     <th>Mã Phòng</th>
