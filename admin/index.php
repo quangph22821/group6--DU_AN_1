@@ -114,7 +114,7 @@ if (isset($_GET['act'])) {
         if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
         } else {
         }
-        update_phong($idlp, $tenphong, $giaphong, $mota, $filename, $id);
+        update_phong($idlp, $tenphong, $giaphong, $filename, $mota, $id);
         $thongbao = "Cập Nhật  Thành Công";
       }
       $listloaiphong = loadall_loaiphong();
