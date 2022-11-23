@@ -31,12 +31,11 @@
         </script>
     </div>
     <section class="main_content">
+        <?php extract($room_home) ?>
         <div class="mains">
-            <h2>FAMILY ROOM</h2>
-            <p>Family Room của chúng tôi được thiết kế tiện nghi và sang trọng với đầy đủ các ứng dụng cần thiết. 
-                Kích thước phòng được tối ưu hóa, sử dụng tông màu kem nhẹ nhàng sang trọng mang đến cho bạn một 
-                không gian thư giãn rộng rãi nhất. Bạn có thể thoải mái lựa chọn căn phòng với giường cỡ Queen hoặc 
-                2 giường đơn tùy theo nhu cầu của mình mà không cần lo lắng về sự thoải mái của chất lượng giường.
+            <h2><?= $room_name ?></h2>
+            <p>
+            <?= $description ?>
             </p>
             <div class="content">
                 <div class="gio_vao">
@@ -69,14 +68,14 @@
             </div>
             <div class="bookk">
                 <a href=""><input class="ddd" type="submit" value="Đặt phòng" style=" cursor: pointer;
-    background-color: #AB8A62;
-    width: 150px;
-    font-size: 18px;
-    height: 50px;
-    margin-top: 12px;
-    border: none;
-    text-transform: uppercase;
-    color: #fff;"></a>
+            background-color: #AB8A62;
+            width: 150px;
+            font-size: 18px;
+            height: 50px;
+            margin-top: 12px;
+            border: none;
+            text-transform: uppercase;
+            color: #fff;"></a>
             </div>
         </div>
         <div class="tien_ich">

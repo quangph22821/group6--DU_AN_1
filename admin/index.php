@@ -59,13 +59,13 @@ if (isset($_GET['act'])) {
         $tenphong = $_POST['room_name'];
         $giaphong = $_POST['price'];
         $mota = $_POST['description'];
-        $filename = $_FILES['image']['name'];
+        $hinh = $_FILES['image']['name'];
         $target_dir = "../upload/";
         $target_file = $target_dir . basename($_FILES["image"]["name"]);
         if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
         } else {
         }
-        insert_phong($tenphong, $giaphong, $filename, $mota, $idlp);
+        insert_phong($tenphong, $giaphong, $mota, $hinh, $idlp);
         $thongbao = "Thêm Thành Công";
       }
       $listloaiphong = loadall_loaiphong();
@@ -114,7 +114,7 @@ if (isset($_GET['act'])) {
         if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
         } else {
         }
-        update_phong($idlp, $tenphong, $giaphong, $filename, $mota, $id);
+        update_phong($idlp, $tenphong, $giaphong, $mota, $filename, $id);
         $thongbao = "Cập Nhật  Thành Công";
       }
       $listloaiphong = loadall_loaiphong();
@@ -124,18 +124,8 @@ if (isset($_GET['act'])) {
       break;
     // đây là của khách hàng
     case 'khachhang':
-      $listtaikhoan = loadall_taikhoan(); 
-      include 'khachhang/danhsach.php';
-      break;
-
-      case 'xoa_taikhoan':
-        if(isset($_GET['id']) && ($_GET['id'] > 0)){
-          delete_taikhoan($_GET['id']);
-        }
-        $listtaikhoan = loadall_taikhoan(); 
         include 'khachhang/danhsach.php';
         break;
-    // đây là của tin tức
     case 'tintuc':
       include 'tintuc.php';
       break;

@@ -34,7 +34,7 @@
             <div class="col">
                 <div class="form-group">
                     <label for="">Hình Ảnh</label>
-                    <input type="file" name="image" placeholder=""  multiple>
+                    <input type="file" name="image" placeholder="" multiple>
                 </div>
             </div>
             <div class="col">
@@ -51,4 +51,4 @@
         if (isset($thongbao) && ($thongbao != "")) echo $thongbao;
         ?>
     </form>
-</div>
+</div>k

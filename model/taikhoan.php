@@ -8,17 +8,3 @@ function dang_nhap($user_name, $password){
     $dn = pdo_query_one($sql);
     return $dn;
 }
-function loadall_taikhoan(){
-    $sql = "SELECT * FROM user order by id ";
-    $listaikhoan = pdo_query($sql);
-    return $listaikhoan;
-}
-function delete_taikhoan($id){
-    $sql = "DELETE FROM user where id = '$id'";
-    pdo_execute($sql);
-}
-function check_email($email){
-    $sql = "SELECT * FROM user WHERE email = '$email'";
-    $kh = pdo_query_one($sql);
-    return $kh;
-}
