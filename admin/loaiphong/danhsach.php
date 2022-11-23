@@ -12,9 +12,8 @@
     <div class="danh_sach">
         <table border='1'>
             <tr>
-                <th>Mã loại</th>
-                <th>Tên loại</th>
-                <th>Chức Năng</th>
+                <td>Mã loại</td>
+                <td>Tên loại</td>
             </tr>
 
             <?php foreach ($listloaiphong as $key => $value): {
