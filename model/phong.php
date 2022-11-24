@@ -1,6 +1,6 @@
 <?php
-function insert_phong($tenphong,$giaphong,$filename,$mota,$idlp){
-    $sql = "INSERT INTO room_type(room_name,description,image,price,ID_lp) VALUES ('$tenphong','$mota','$filename','$giaphong','$idlp')";
+function insert_phong($tenphong,$giaphong,$hinh,$mota,$idlp){
+    $sql = "INSERT INTO room_type(room_name,price,image,description,ID_lp) VALUES ('$tenphong','$giaphong','$hinh','$mota','$idlp')";
     pdo_execute($sql);
 }
 
