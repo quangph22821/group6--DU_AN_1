@@ -65,7 +65,7 @@ if (isset($_GET['act'])) {
         if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
         } else {
         }
-        insert_phong($tenphong, $giaphong, $mota, $hinh, $idlp);
+        insert_phong($tenphong,$giaphong,$hinh,$mota,$idlp);
         $thongbao = "Thêm Thành Công";
       }
       $listloaiphong = loadall_loaiphong();
