@@ -11,10 +11,9 @@
     <a href="index.php?act=them"><input type="button" value="Nhập thêm"></a>
     <div class="danh_sach">
         <table border='1'>
-            <tr >
+            <tr>
                 <td>Mã loại</td>
                 <td>Tên loại</td>
-                <td>Chức năng</td>
             </tr>
 
             <?php foreach ($listloaiphong as $key => $value): {

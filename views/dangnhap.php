@@ -26,7 +26,7 @@
                 extract($_SESSION['user_name']);
             ?>
             <div class="chao">
-                <h2 style="margin-bottom: 12px;">Xin chào <?= $user_name ?></h2>
+                <h2 style="margin-bottom: 12px;">Xin chào <?= $name ?></h2>
             </div>
             <div class="chao">
                 <?php 
@@ -37,7 +37,7 @@
                 </div>
                 <?php } ?>
                 <div class="ccc">
-                    <li><a href="./index.php?act=quen_mat_khau">Quên mật khẩu</a></li>
+                    <li><a href="./index.php?act=quenmatkhau">Quên mật khẩu</a></li>
                 </div>
                 <div class="ccc">
                     <li><a href="./index.php?act=edit_tai_khoan">Cập nhật tài khoản</a></li>
@@ -94,7 +94,7 @@
                 </div>
                 <style>
                     .nhap .btn{
-                        width: 20%;
+                        width: 25%;
                         height: 40px;
                         margin-left: 27%;
                         border: none;
@@ -105,6 +105,9 @@
                         margin-bottom: 12px;
                     }
                 </style>
+                <div class="nhap">
+                   <a href="./index.php?act=quenmatkhau"><input  name="dang_nhap" value="Quên mật khẩu" class="btn"  style=" cursor:pointer;"></a>
+                </div>
                 <div class="dangky">
                     <span>Bạn chưa có tài khoản ?<a href="./index.php?act=dangky">Đăng ký</a></span>
                 </div>

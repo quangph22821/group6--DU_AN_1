@@ -30,14 +30,11 @@
                         Phòng & giá
                     </p>
                 </div>
-                
                 <div class="products_1">
-
-                    
+                <?php foreach ($listphong as $key => $value) : ?>
                     <div class="room">
-                    <?php foreach ($listphong as $key => $value) : ?>
                         <div class="img">
-                            <a href="./index.php?act=chitietphong&id=<?=$value['id']?>"><img src="./upload/<?= $value['image'] ?>" alt="" width="380px"></a>
+                            <a href="./index.php?act=chitietphong&id=<?=$value['id']?>"><img src="./upload/<?= $value['image'] ?>" alt="" width="380px" height="506.67px"></a>
                         </div>
                         <div class="book">
                             <a href=""><button>Đặt phòng</button></a>
@@ -59,11 +56,8 @@
                                 </h6>
                             </div>
                         </div>
-                        <?php endforeach ?>
-
                     </div>
-                    
-                   
+                    <?php endforeach ?> 
                 </div>
                 <!-- <div class="products_2">
                     <div class="rooms">
