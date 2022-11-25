@@ -1,12 +1,9 @@
 
     <link rel="stylesheet" href="./css/chitiet.css">
     <div class="anh_phong">
+    <?php foreach ($listphong as $key => $value) : ?>
         <div class="anh">
-            <img src="./banner/bn8.jpg" style="height: 450px; width: 75%;">
-        </div>
-
-        <div class="anh">
-            <img src="./banner/bn3.jpg" style="height: 450px; width: 75%">
+            <img src="./upload/<?= $value['image'] ?>" alt="" width="380px"></a>
         </div>
         <div style="text-align:center">
             <span class="dot" onclick="currentSlide(1)"></span>
@@ -31,11 +28,10 @@
         </script>
     </div>
     <section class="main_content">
-        <?php extract($room_home) ?>
         <div class="mains">
-            <h2><?= $room_name ?></h2>
+            <h2><?= $value['room_name'] ?></h2>
             <p>
-            <?= $description ?>
+            <?= $value['description'] ?>
             </p>
             <div class="content">
                 <div class="gio_vao">
@@ -100,3 +96,5 @@
             </div>
         </div>
     </section>
+<?php
+    endforeach ?>

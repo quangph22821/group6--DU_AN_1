@@ -124,6 +124,14 @@ if (isset($_GET['act'])) {
       break;
     // đây là của khách hàng
     case 'khachhang':
+      $listtaikhoan = loadall_taikhoan(); 
+      include 'khachhang/danhsach.php';
+      break;
+      case 'xoa_taikhoan':
+        if(isset($_GET['id']) && ($_GET['id'] > 0)){
+          delete_taikhoan($_GET['id']);
+        }
+        $listtaikhoan = loadall_taikhoan(); 
         include 'khachhang/danhsach.php';
         break;
     case 'tintuc':
