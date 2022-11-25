@@ -1,9 +1,9 @@
 
     <link rel="stylesheet" href="./css/chitiet.css">
     <div class="anh_phong">
-    <?php foreach ($listphong as $key => $value) : ?>
+    <?php extract($room_home) ?>
         <div class="anh">
-            <img src="./upload/<?= $value['image'] ?>" alt="" width="380px"></a>
+            <img src="./upload/<?= $image ?>" alt="" width="380px"></a>
         </div>
         <div style="text-align:center">
             <span class="dot" onclick="currentSlide(1)"></span>
@@ -29,9 +29,9 @@
     </div>
     <section class="main_content">
         <div class="mains">
-            <h2><?= $value['room_name'] ?></h2>
+            <h2><?= $room_name ?></h2>
             <p>
-            <?= $value['description'] ?>
+            <?= $description ?>
             </p>
             <div class="content">
                 <div class="gio_vao">
@@ -96,5 +96,3 @@
             </div>
         </div>
     </section>
-<?php
-    endforeach ?>

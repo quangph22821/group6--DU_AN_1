@@ -21,7 +21,7 @@ $sql = "SELECT * FROM room_type ORDER BY id DESC";
             <?php
             foreach ($listloaiphong as $loaiphong) {
                 extract($loaiphong);
-                echo '<option value="' . $id . '">' . $name . '</option>';
+                echo '<option value="' . $id . '">' . $name_room . '</option>';
             }
             ?>
 
