@@ -5,7 +5,7 @@ include "../model/taikhoan.php";
 include "../model/loaiphong.php";
 include "../model/phong.php";
 include_once "header.php";
-
+$listphong = loadall_phong();
 // controller
 if (isset($_GET['act'])) {
   $act = $_GET['act'];
@@ -50,7 +50,17 @@ if (isset($_GET['act'])) {
       break;
    
     // đây là của phòng
-    
+    case 'chitietphong':
+      if(isset($_GET['id']) && ($_GET['id']>0)){
+        $id = $_GET['id'];
+        $room_home = loadone_phong($id);
+        extract ($room_home);
+        include '../views/chitiet_phong.php';
+      }else{
+        include 'views/main.php';
+      }
+        
+        break;
     
     case 'addlp':
       // kiểm tra người dùng bấm hay ko
