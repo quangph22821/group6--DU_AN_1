@@ -3,7 +3,7 @@
     <div class="anh_phong">
     <?php extract($room_home) ?>
         <div class="anh">
-            <img src="./upload/<?= $image ?>" alt="" width="100%" height="500px"></a>
+            <img src="./upload/<?= $image ?>" alt="" width="80%" height="500px"></a>
         </div>
         <div style="text-align:center">
             <span class="dot" onclick="currentSlide(1)"></span>
@@ -65,8 +65,7 @@
                 </p>
             </div>
             <div class="bookk">
-                <a href=""><input class="ddd" type="submit" value="Đặt phòng" style=" cursor: pointer;
-            background-color: #AB8A62;
+                <a href=""><input class="ddd" type="submit" value="Đặt phòng" style=" cursor: pointer; background-color: #AB8A62;
             width: 150px;
             font-size: 18px;
             height: 50px;
@@ -96,5 +95,11 @@
             <div class="system">
                 <i class="fa-solid fa-chart-area"></i>45m2
             </div>
+            <div class="binhluan">
+            <form action="">
+                <input type="text" name="" id="" placeholder="Hãy viết đánh giá của bạn vào đây!">
+            </form>
         </div>
+        </div>
+        
     </section>
