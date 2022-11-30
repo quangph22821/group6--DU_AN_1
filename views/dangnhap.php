@@ -30,7 +30,7 @@
             </div>
             <div class="chao">
                 <?php 
-                    if($role == 0){
+                    if($role == 2){
                 ?>
                 <div class="ccc">
                 <li><a href="./admin/index.php">Đăng nhập Admin</a></li>

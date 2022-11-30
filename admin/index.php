@@ -4,6 +4,7 @@ include "../model/connect.php";
 include "../model/taikhoan.php";
 include "../model/loaiphong.php";
 include "../model/phong.php";
+include "../model/binhluan.php";
 include_once "header.php";
 $listphong = loadall_phong();
 // controller
@@ -144,6 +145,12 @@ if (isset($_GET['act'])) {
         include 'khachhang/danhsach.php';
         break;
     
+    // bình luận
+    case 'binhluan':
+        
+        $listbl=loadall_binhluan(0);
+        include 'binhluan/danhsach.php';
+        break;
     case 'tintuc':
       include 'tintuc.php';
       break;

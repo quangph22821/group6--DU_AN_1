@@ -3,9 +3,11 @@ session_start();
 include "./model/connect.php";
 include "./model/taikhoan.php";
 include "./model/phong.php";
+include "./model/binhluan.php";
 include_once "views/header.php";
 // controller
   $listphong = loadall_phong();
+  $listbinhluan = loadall_binhluan("", 0);
 if (isset($_GET['act'])) {
   $act = $_GET['act'];
   switch ($act) {

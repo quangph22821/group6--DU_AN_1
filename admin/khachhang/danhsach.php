@@ -35,12 +35,12 @@
                 <td><?=$value['password']?></td>
                 <td>
                 <?php 
-                    if($value['role']===0){
+                    if($value['role']===2){
                         echo 'Quản trị viên';
                     }else{
                         echo 'Khách hàng';
                 } ?>
-                </td>
+                </td>`
             <td>
                  <a href="./index.php?act=xoa_taikhoan&id=<?=$value['id']?>">Xóa</a>
             </td>

@@ -4,6 +4,7 @@
     <?php extract($room_home) ?>
         <div class="anh">
             <img src="./upload/<?= $image ?>" alt="" width="80%" height="500px"></a>
+            <img src="./upload/<?= $image ?>" alt="" width="380px"></a>
         </div>
         <div style="text-align:center">
             <span class="dot" onclick="currentSlide(1)"></span>
@@ -29,11 +30,9 @@
     </div>
     <section class="main_content">
         <div class="mains">
-            <h2>
-                <?= $room_name ?>
-            </h2>
+            <h2><?= $room_name ?></h2>
             <p>
-                <?= $description ?>
+            <?= $description ?>
             </p>
             <div class="content">
                 <div class="gio_vao">
@@ -95,11 +94,28 @@
             <div class="system">
                 <i class="fa-solid fa-chart-area"></i>45m2
             </div>
-            <div class="binhluan">
-                <form action="">
-                    <input type="text" name="" id="" placeholder="Hãy viết đánh giá của bạn vào đây!">
-                </form>
-            </div>
         </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+            <script>
+                $(document).ready(function(){
+                    $("#binhluan").load("./views/binhluanform.php", {idphong: <?=$id?>});
+                });
+
+            </script>
+
+            <div class="row" id='binhluan'>
+
+            </div>
+    </section>
+            
+            <!-- <form action="binhluan" method="post"> -->
+
+            
+
+        <!-- </form> -->
+
+        
+        </div>
+
         
     </section>
