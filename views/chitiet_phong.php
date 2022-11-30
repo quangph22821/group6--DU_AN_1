@@ -94,5 +94,25 @@
             <div class="system">
                 <i class="fa-solid fa-chart-area"></i>45m2
             </div>
+            
+            <!-- <form action="binhluan" method="post"> -->
+
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+            <script>
+                $(document).ready(function(){
+                    $("#binhluan").load("./views/binhluanform.php", {idphong: <?=$id?>});
+                });
+
+            </script>
+
+            <div class="row" id='binhluan'>
+
+            </div>
+
+        <!-- </form> -->
+
+        
         </div>
+
+        
     </section>
