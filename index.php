@@ -63,7 +63,23 @@ if (isset($_GET['act'])) {
         session_unset();
         header('location:index.php');
         break;
-
+    case 'suataikhoan':
+      if(isset($_POST['updatetaikhoan']) && ($_POST['updatetaikhoan'])){
+        $id = $_POST['id'];
+        $name = $_POST['name'];
+        $address = $_POST['address'];
+        $email = $_POST['email'];
+        $telephone = $_POST['telephone'];
+        $user_name = $_POST['user_name'];
+        $password = $_POST['password'];
+        update_taikhoan($id, $name, $address, $email, $telephone, $user_name, $password);
+        echo "CẬP NHẬT THÀNH CÔNG";
+      }
+      $id = $_GET['id'];
+      $taikhoan = load_taikhoan($id);
+      
+      include 'views/suataikhoan.php';
+      break;
     //  end đăng nhập đăng kí
     case 'phongnghi':
         include 'views/phongnghi.php';
@@ -79,6 +95,11 @@ if (isset($_GET['act'])) {
       }
         
         break;
+
+    // đây là tìm và đặt phòng
+    case 'timphongtrong':
+      include 'views/timphongtrong.php';
+      break;
     case 'amthuc':
         include 'views/amthuc.php';
         break;

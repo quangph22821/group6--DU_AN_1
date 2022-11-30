@@ -96,10 +96,10 @@
                 <i class="fa-solid fa-chart-area"></i>45m2
             </div>
             <div class="binhluan">
-            <form action="">
-                <input type="text" name="" id="" placeholder="Hãy viết đánh giá của bạn vào đây!">
-            </form>
-        </div>
+                <form action="">
+                    <input type="text" name="" id="" placeholder="Hãy viết đánh giá của bạn vào đây!">
+                </form>
+            </div>
         </div>
         
     </section>

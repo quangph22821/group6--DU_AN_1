@@ -1,5 +1,5 @@
-<div class="phong">
-    <div class="text">
+<div class="add_phong">
+    <div class="title">
         <h1>Thêm mới phòng</h1>
     </div>
     <form action="index.php?act=addlp" method="post" enctype="multipart/form-data">
@@ -44,9 +44,11 @@
                 </div>
             </div>
         </div>
-        <input type="submit" name="themmoi" value="Thêm Mới">
+      <div class="btn">
+      <input type="submit" name="themmoi" value="Thêm Mới">
         <input type="reset" value="Nhập Lại">
         <a href="index.php?act=listphong"> <input type="button" value="Danh Sách"></a>
+      </div>
         <?php
         if (isset($thongbao) && ($thongbao != "")) echo $thongbao;
         ?>

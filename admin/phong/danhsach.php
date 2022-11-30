@@ -10,8 +10,8 @@ $sql = "SELECT * FROM room_type ORDER BY id DESC";
 <!-- $phong = $stmt->fetchAll(PDO::FETCH_ASSOC); -->
 
 
-<div class="row">
-    <div class="row fromtitle mb">
+<div class="danhsach_phong">
+    <div class="title">
         <h1>Danh Sách Sản Phẩm</h1>
     </div>
     <form action="index.php?act=listphong" method="post" >

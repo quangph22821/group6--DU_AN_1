@@ -40,7 +40,7 @@
                     <li><a href="./index.php?act=quenmatkhau">Quên mật khẩu</a></li>
                 </div>
                 <div class="ccc">
-                    <li><a href="./index.php?act=edit_tai_khoan">Cập nhật tài khoản</a></li>
+                    <li><a href="./index.php?act=suataikhoan&id=<?= $id ?>">Cập nhật tài khoản</a></li>
                 </div>
                <div class="ccc">
                     <li><a href="./index.php?act=dangxuat">Đăng xuất</a></li>

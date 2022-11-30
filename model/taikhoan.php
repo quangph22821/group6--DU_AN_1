@@ -22,3 +22,13 @@ function check_email($email){
     $kh = pdo_query_one($sql);
     return $kh;
 }
+function load_taikhoan($id){
+    $sql = "SELECT * FROM user where id ='$id'";
+    $taikhoan = pdo_query_one($sql);
+    return $taikhoan;
+}
+function update_taikhoan($id, $name, $address, $email, $telephone, $user_name, $password){
+    $sql = "UPDATE user SET name = '$name', address = '$address', email = '$email', telephone = '$telephone', user = '$user_name', password = '$password' where id = '$id'";
+    pdo_execute($sql);
+    
+}

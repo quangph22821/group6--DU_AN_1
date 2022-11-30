@@ -14,6 +14,7 @@
             <tr>
                 <td>Mã loại</td>
                 <td>Tên loại</td>
+                <td>Hành động</td>
             </tr>
 
             <?php foreach ($listloaiphong as $key => $value): {

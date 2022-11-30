@@ -43,7 +43,6 @@
                 </td>
             <td>
                  <a href="./index.php?act=xoa_taikhoan&id=<?=$value['id']?>">Xóa</a>
-                 <a href="index.php?act=sua&id=<?=$value['id']?>">Sửa</a>
             </td>
             </tr>
             <?php endforeach ?>

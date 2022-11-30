@@ -493,6 +493,54 @@ form .form-group{
     padding: 20px;
     background-color: #ccc;
 }
+/* CSS PHÒNG */
+.add_phong{
+    text-align: center;
+    margin: 40px 250px;
+    padding: 20px 10px;
+    background-color: #AB8A62;
+    border-radius: 20px;
+    box-shadow: 10px 15px 1px salmon;
+}
+.title h1{
+   margin: 10px 0;
+}
+form .form-group{
+    font-size: 20px;
+    margin-bottom:10px ;
+}
+
+.form-group .inp{
+    width: 50%;
+    height: 25px;
+    border-radius: 5px;
+    border: none;
+}
+.btn input{
+    cursor: pointer;
+    background-color: #222;
+    color: #fff;
+    padding: 0 5px;
+    border-radius: 5px;
+}
+
+.sua_phong{
+    text-align: center;
+    margin: 40px 250px;
+    padding: 20px 10px;
+    background-color: #AB8A62;
+    border-radius: 20px;
+    box-shadow: 10px 15px 1px salmon;
+}
+
+.danhsach_phong  tr th{
+    padding: 20px;
+    background-color: #ccc;
+   
+}
+.danhsach_phong table{
+    width: 100%;
+}
 /* CSS tin tức */
 .tintuc_list{
     display: grid;
@@ -703,4 +751,35 @@ td{
 }
 .uudai_book a:hover {
     background-color: #222;
+}
+/* CSS tìm phòng trống */
+.checktrong .btn{
+    width: 30%;
+    text-align: center;
+    height: 40px;
+    margin-left: 35%;
+    border: none;
+    background: #AB8A62;
+    text-transform: uppercase;
+    font-size: medium;
+    color: #fff;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    cursor: pointer;
+}
+
+.timphong label {
+    margin-bottom: 8px;
+}
+
+.timphong input {
+    width: 80%;
+    height: 35px;
+    margin: 12px 0;
+    padding: 0 12px;
+}
+select{
+    width: 60px;
+    height: 30px;
+    text-align: center;
 }

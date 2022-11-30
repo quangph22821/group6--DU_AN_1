@@ -48,7 +48,6 @@ if (isset($_GET['act'])) {
      
       include 'loaiphong/sua.php';
       break;
-   
     // đây là của phòng
     case 'chitietphong':
       if(isset($_GET['id']) && ($_GET['id']>0)){
@@ -144,6 +143,7 @@ if (isset($_GET['act'])) {
         $listtaikhoan = loadall_taikhoan(); 
         include 'khachhang/danhsach.php';
         break;
+    
     case 'tintuc':
       include 'tintuc.php';
       break;

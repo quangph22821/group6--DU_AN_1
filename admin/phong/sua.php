@@ -9,13 +9,15 @@ if (is_file($hinhpath)) {
     $hinh=" không có hình";
 }
 ?>
-<div class="row">
-            <div class="row fromtitle">
+<div class="sua_phong">
+            <div class="title">
                 <h1>Cập Nhật Phòng</h1>
             </div>
-            <div class="row fromcontent">
+            <div class="row">
             <form action="index.php?act=capnhat" method="post" enctype="multipart/form-data">
-                    <div class="row mb10">
+                <div class="col">
+                <div class="form-group">
+                    <label for="">Loại phòng</label>
                     <select name="ID_lp" >
                         
                         <?php
@@ -29,26 +31,33 @@ if (is_file($hinhpath)) {
                     </select>
                  
                     </div>
+                </div>
                   
-                    <div class="row mb10">
-                        Tên Phòng<br>
+                    <div class="col">
+                    <div class="form-group">
+                    <label for="">Tên phòng</label>
                     <input type="text" name="room_name" value="<?=$phong['room_name']?>">
                     </div>
-                    <div class="row mb10">
-                        Giá Phòng<br>
+                    </div>
+                   <div class="col">
+                   <div class="form-group">
+                   <label for="">Giá phòng</label>
                     <input type="number" name="price" value="<?=$phong['price']?>" >
                     </div>
-                    <div class="row mb10">
-                        Hình Phòng<br>
+                   </div>
+                 <div class="col">   <div class="form-group">
+                 <label for="">Hình phòng</label>
                     <input type="file" name="image" id="files"  multiple >
                     <img src="../upload/<?=$phong['image'] ?>" width="123" alt="">
-                    </div>
-                    <div class="row mb10">
-                        Mô Tả<br>
+                    </div></div>
+                    <div class="col">
+                    <div class="form-group">
+                    <label for="">Mô tả</label>
                     <input  type="text" name="description"  style="width=200px" value="<?=$phong['description']?>">
                     </div>
+                    </div>
                   
-                    <div class="row mb10">
+                    <div class="btn">
                         <input type="hidden" name="id" value="<?=$phong['id']?>">
                         <input type="submit"name="capnhat" value="Cập Nhật">
                         <input type="reset" value="Nhập Lại">
