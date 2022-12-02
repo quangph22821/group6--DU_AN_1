@@ -9,27 +9,32 @@
 <body>
 <table border='1'>
             <tr>
+                <td>Thứ tụ</td>
                 <td>Iduser</td>
                 <td>Idphong</td>
                 <td>Nội dung</td>
                 <td>Ngày bình luận</td>
             </tr>
 
-            <?php foreach ($listbl as $key => $value): {
+            <?php foreach ($listbinhluan as $binhluan => $bl): {
+               
                 
             }?>
             <tr>
-                <td><?=$value['iduser']?></td>
-                <td><?=$value['idphong']?></td>
-                <td><?=$value['noidung']?></td>
-                <td><?=$value['ngaybinhluan']?></td>
+                <td><?=$bl['id']?></td>
+                <td><?=$bl['iduser']?></td>
+                <td><?=$bl['idphong']?></td>
+                <td><?=$bl['noidung']?></td>
+                <td><?=$bl['ngaybinhluan']?></td>
+
             <td>  
                 
-                 <a href="?act=deletebl&id=<?=$value['id']?>">Xóa</a>
+                 <a href="?act=deletebl&id=<?=$bl['id']?>">Xóa</a>
               
             </td>
             </tr>
             <?php endforeach ?>
         </table>
+     
 </body>
 </html>

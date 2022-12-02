@@ -8,8 +8,8 @@
     <title>Danh sách loại phòng</title>
 </head>
 <body>
-    <a href="index.php?act=them"><input type="button" value="Nhập thêm"></a>
-    <div class="danh_sach">
+    <a href="index.php?act=them" style=""><input type="button" value="Nhập thêm"></a>
+    <div class="danh_sach" >
         <table border='1'>
             <tr>
                 <td>Mã loại</td>
@@ -25,8 +25,8 @@
                 <td><?=$value['name_room']?></td>
             <td>  
                 
-                 <a href="?act=delete&id=<?=$value['id']?>">Xóa</a>
-                 <a href="index.php?act=sua&id=<?=$value['id']?>">Sửa</a>
+                 <a href="?act=delete&id=<?=$value['id']?>" style="text-decoration: none;">Xóa</a>
+                 <a href="index.php?act=sua&id=<?=$value['id']?>"style="text-decoration: none;">Sửa</a>
             </td>
             </tr>
             <?php endforeach ?>

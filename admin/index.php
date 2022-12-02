@@ -148,10 +148,18 @@ if (isset($_GET['act'])) {
     
     // bình luận
     case 'binhluan':
-        
-        $listbl=loadall_binhluan(0);
+        $listbinhluan=loadall_binhluan(0);
         include 'binhluan/danhsach.php';
         break;
+    
+    case 'deletebl':
+      if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+          delete_binhluan($_GET['id']);
+      }
+      $listbinhluan = loadall_binhluan("", 0);
+      include "binhluan/danhsach.php";
+      break;
+          //
     case 'tintuc':
       include 'tintuc.php';
       break;

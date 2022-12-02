@@ -23,12 +23,11 @@
     <div class="binhluan">
                 <h1 class="test">BÌNH LUẬN</h1>
 
-                <div class="containerrigth__list--content-DM">
+                <div class="table_bl" style="width: 100%;">
 
-                    <ul>
                         <table>
                             <tr>
-                                <th>ID người dùng</th>
+                                <th>Người bình luận</th>
                                 <th>Thứ tự</th>
                                 <th>Nội dung</th>
                                 <th>Ngày giờ</th>
@@ -36,7 +35,7 @@
 
                             <?php
 
-                            foreach ($listbinhluan as $bl) {
+                            foreach ($listbinhluan as $bl){
                                 extract($bl);
                                 echo '<tr><td>' . $iduser . '</td>';
                                 echo ' <td>' . $id. '</td>';
@@ -46,13 +45,13 @@
 
                             ?>
                         </table>
-                    </ul>
-    </div>
+                    
+                </div>
 
 
-    <div class="binh_luan">
+        <div class="binh_luan">
      
-        <div class="gui_binh_luan">
+            <div class="gui_binh_luan">
             
             <form action="<?= $_SERVER['PHP_SELF']; ?>" method="post">
             <input type="hidden" name="idphong" value="<?= $idphong ?>">
@@ -66,8 +65,8 @@
     <?php
             if (isset($_POST['guibinhluan']) && ($_POST['guibinhluan'])) {
                 $noidung = $_POST['noidung'];
+                $iduser = $_SESSION['user_name']['name'];
                 $idphong = $_POST['idphong'];
-                $iduser = $_SESSION['user_name']['id'];
                 $ngaybinhluan = date('d/m/Y');
                 insert_binhluan($noidung,$iduser,$idphong,$ngaybinhluan);
                 header("location:".$_SERVER['HTTP_REFERER']);
