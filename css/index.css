@@ -753,33 +753,41 @@ td{
     background-color: #222;
 }
 /* CSS tìm phòng trống */
+.main_datphong{
+    display: grid;
+    grid-template-columns: 500px 1fr;
+    margin-bottom: 40px;
+}
 .checktrong .btn{
-    width: 30%;
-    text-align: center;
-    height: 40px;
-    margin-left: 35%;
-    border: none;
-    background: #AB8A62;
-    text-transform: uppercase;
-    font-size: medium;
-    color: #fff;
-    margin-top: 12px;
-    margin-bottom: 12px;
-    cursor: pointer;
+    position: relative;
+width: 30%;
+text-align: center;
+height: 40px;
+top: 30px;
+left: 200px;
+border: none;
+background: #AB8A62;
+text-transform: uppercase;
+font-size: medium;
+color: #fff;
+margin-top: -40px;
+margin-bottom: 12px;
+cursor: pointer;
 }
 
 .timphong label {
-    margin-bottom: 8px;
+margin-bottom: 8px;
 }
 
 .timphong input {
-    width: 80%;
-    height: 35px;
-    margin: 12px 0;
-    padding: 0 12px;
+width: 80%;
+height: 40px;
+margin: 12px 0;
+padding: 0 12px;
 }
 select{
-    width: 60px;
-    height: 30px;
-    text-align: center;
+margin-right: 32px;
+width: 80px;
+height: 30px;
+text-align: center;
 }

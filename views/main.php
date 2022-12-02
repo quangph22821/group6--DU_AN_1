@@ -37,11 +37,11 @@
                             <a href="./index.php?act=chitietphong&id=<?=$value['id']?>"><img src="./upload/<?= $value['image'] ?>" alt="" width="380px" height="506.67px"></a>
                         </div>
                         <div class="book">
-                            <a href="./index.php?act=timphongtrong"><button>Đặt phòng</button></a>
+                            <a href="./index.php?act=timphongtrong&id=<?=$value['id']?>"><button name ="datphong">Đặt phòng</button></a>
                         </div>
                         <div class="gia">
 
-                            <p><?=$value['price'] ?></p>
+                            <p><?=$value['price'] ?>$</p>
                             <h6><?=$value['room_name']?></h6>
 
                             <hr style="color: white; height: 1px; margin-top: 12px;">

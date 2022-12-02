@@ -18,7 +18,7 @@
                         </div>
                         <div class="gia">
 
-                            <p><?=$value['price'] ?></p>
+                            <p><?=$value['price'] ?>$</p>
                             <h6><?=$value['room_name']?></h6>
 
                             <hr style="color: white; height: 1px; margin-top: 12px;">

@@ -4,7 +4,6 @@
     <?php extract($room_home) ?>
         <div class="anh">
             <img src="./upload/<?= $image ?>" alt="" width="80%" height="500px"></a>
-            <img src="./upload/<?= $image ?>" alt="" width="380px"></a>
         </div>
         <div style="text-align:center">
             <span class="dot" onclick="currentSlide(1)"></span>
@@ -64,7 +63,7 @@
                 </p>
             </div>
             <div class="bookk">
-                <a href=""><input class="ddd" type="submit" value="Đặt phòng" style=" cursor: pointer; background-color: #AB8A62;
+                <a href="./index.php?act=timphongtrong&id=<?=$id?>"><input class="ddd" name="datphong" type="submit" value="Đặt phòng" style=" cursor: pointer; background-color: #AB8A62;
             width: 150px;
             font-size: 18px;
             height: 50px;
@@ -94,8 +93,7 @@
             <div class="system">
                 <i class="fa-solid fa-chart-area"></i>45m2
             </div>
-        </div>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
             <script>
                 $(document).ready(function(){
                     $("#binhluan").load("./views/binhluanform.php", {idphong: <?=$id?>});
@@ -106,6 +104,8 @@
             <div class="row" id='binhluan'>
 
             </div>
+        </div>
+        
     </section>
             
             <!-- <form action="binhluan" method="post"> -->

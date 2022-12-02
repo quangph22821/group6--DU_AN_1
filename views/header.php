@@ -75,6 +75,6 @@
                 </div>
             </div>
             <div class="booking">
-                <button><a href="">Đặt phòng</a></button>
+                <button><a href="./index.php?act=phongnghi">Đặt phòng</a></button>
             </div>
         </header>

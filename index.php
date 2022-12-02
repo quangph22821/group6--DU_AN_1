@@ -4,10 +4,13 @@ include "./model/connect.php";
 include "./model/taikhoan.php";
 include "./model/phong.php";
 include "./model/binhluan.php";
+include "./model/datphong.php";
 include_once "views/header.php";
 // controller
   $listphong = loadall_phong();
   $listbinhluan = loadall_binhluan("", 0);
+  
+  // $list_taikhoan = load_taikhoan($id); 
 if (isset($_GET['act'])) {
   $act = $_GET['act'];
   switch ($act) {
@@ -100,8 +103,35 @@ if (isset($_GET['act'])) {
 
     // đây là tìm và đặt phòng
     case 'timphongtrong':
+      if(isset($_POST['datphong']) && ($_POST['datphong'])){
+        $checkuser = dang_nhap($user_name, $password);
+        if(is_array($checkuser)){
+            $_SESSION['user_name'] = $checkuser;
+            // header('location:index.php');
+          }else{
+              echo 'Bạn cần đăng nhập để đặt phòng!';
+         } 
+      }
       include 'views/timphongtrong.php';
       break;
+    case 'thanhtoan':
+      if(isset($_POST['thanhtoan']) && ($_POST['thanhtoan'])){
+            $full_name = $_SESSION['user_name']['name'];
+            $telephone = $_SESSION['user_name']['telephone'];
+            $email = $_SESSION['user_name']['email'];
+            $address = $_SESSION['user_name']['address'];
+            $total_price = $_POST['price'];
+            $checkin = $_POST['checkin'];
+            $checkout = $_POST['checkout'];
+            $nguoi_lon = $_POST['nguoi_lon'];
+            $tre_em = $_POST['tre_em'];
+            booking ($full_name, $telephone, $email, $address, $total_price, $checkin, $checkout, $nguoi_lon, $tre_em); ?>
+            <script>
+              alert("Đặt phòng thành công!");
+            </script>
+       <?php }
+        include "views/thanhtoan.php";
+        break;
     case 'amthuc':
         include 'views/amthuc.php';
         break;

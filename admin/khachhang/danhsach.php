@@ -22,9 +22,7 @@
                 <th>Chức Năng</th>
             </tr>
 
-            <?php foreach ($listtaikhoan as $key => $value): {
-
-            }?>
+            <?php foreach ($listtaikhoan as $key => $value): ?>
             <tr>
                 <td><?=$value['id']?></td>
                 <td><?=$value['name']?></td>
