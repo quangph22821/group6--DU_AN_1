@@ -489,9 +489,16 @@ form .form-group{
     box-shadow: 14px 15px 1px #bccdbd;
 }
 
-.danh_sach table tr td{
-    padding: 20px;
-    background-color: #ccc;
+.danh_sach table{
+    width: 100%;
+    
+}
+td a{
+    text-decoration: none;
+}
+.danh_sach {
+    width: 100%;
+    
 }
 /* CSS PHÒNG */
 .add_phong{
@@ -751,43 +758,4 @@ td{
 }
 .uudai_book a:hover {
     background-color: #222;
-}
-/* CSS tìm phòng trống */
-.main_datphong{
-    display: grid;
-    grid-template-columns: 500px 1fr;
-    margin-bottom: 40px;
-}
-.checktrong .btn{
-    position: relative;
-width: 30%;
-text-align: center;
-height: 40px;
-top: 30px;
-left: 200px;
-border: none;
-background: #AB8A62;
-text-transform: uppercase;
-font-size: medium;
-color: #fff;
-margin-top: -40px;
-margin-bottom: 12px;
-cursor: pointer;
-}
-
-.timphong label {
-margin-bottom: 8px;
-}
-
-.timphong input {
-width: 80%;
-height: 40px;
-margin: 12px 0;
-padding: 0 12px;
-}
-select{
-margin-right: 32px;
-width: 80px;
-height: 30px;
-text-align: center;
 }

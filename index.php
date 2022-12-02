@@ -9,8 +9,6 @@ include_once "views/header.php";
 // controller
   $listphong = loadall_phong();
   $listbinhluan = loadall_binhluan("", 0);
-  
-  // $list_taikhoan = load_taikhoan($id); 
 if (isset($_GET['act'])) {
   $act = $_GET['act'];
   switch ($act) {
