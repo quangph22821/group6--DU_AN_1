@@ -122,27 +122,29 @@ if (isset($_GET['act'])) {
               <script>
                 alert("Mời bạn thanh toán để xác nhận đặt hàng!");
               </script>
-
           <?php
           }else{ ?>
             <script>
                 alert("Vui lòng nhập đúng thông tin!");
               </script>
-              <?php 
-                include "views/timphongtrong.php"; 
-              }
-              include "views/thanhtoan.php";
-        break;
+         <?php }
             }
-        
+        include "views/thanhtoan.php";
+        break;
         case 'xacnhan':
-          if(isset($_GET['id']) && ($_GET['id']>0)){
-            $id = $_GET['id'];
-            $donhang = load_donhang($id);
-            extract ($donhang);
-          }
+          $listdonhang = loadall_donhang();
           include 'views/thanhtoan.php';
           break;
+        case 'thanhtoan_thanhcong':
+          if(isset($_POST['thanhcong']) && ($_POST['thanhcong'])) {
+            
+              echo "cám ơn bạn đã sử dụng dịch vụ của chúng tôi";
+            
+          
+          }
+         include 'views/thanhtoan.php';
+          
+            break;
     case 'amthuc':
         include 'views/amthuc.php';
         break;

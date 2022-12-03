@@ -77,5 +77,5 @@
     </div>
 </div>
 <?php }else{  
-     echo' <h3>Vui lòng đăng nhập hoặc đăng ký để đặt phòng!</h3>';
+     echo' <h3>Vui lòng đăng nhập để đặt phòng!</h3>';
  } ?>
