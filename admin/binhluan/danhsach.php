@@ -10,10 +10,11 @@
 <table border='1'>
             <tr>
                 <td>Thứ tụ</td>
-                <td>Iduser</td>
+                <td>Người bình luận</td>
                 <td>Idphong</td>
                 <td>Nội dung</td>
                 <td>Ngày bình luận</td>
+                <td>Hành động</td>
             </tr>
 
             <?php foreach ($listbinhluan as $binhluan => $bl): {

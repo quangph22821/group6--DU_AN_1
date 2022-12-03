@@ -31,6 +31,7 @@
                                 <th>Thứ tự</th>
                                 <th>Nội dung</th>
                                 <th>Ngày giờ</th>
+                                
                             </tr>
 
                             <?php
@@ -65,9 +66,8 @@
     <?php
             if (isset($_POST['guibinhluan']) && ($_POST['guibinhluan'])) {
                 $noidung = $_POST['noidung'];
-                $iduser = $_SESSION['user_name']['name'];
                 $idphong = $_POST['idphong'];
-                $iduser = $_SESSION['user_name']['id'];
+                $iduser = $_SESSION['user_name']['name'];
                 $ngaybinhluan = date('d/m/Y');
                 insert_binhluan($noidung,$iduser,$idphong,$ngaybinhluan);
                 header("location:".$_SERVER['HTTP_REFERER']);

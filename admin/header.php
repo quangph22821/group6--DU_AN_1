@@ -68,6 +68,7 @@
                             <li><a href="index.php?act=addlp">Phòng</a></li>
                             <li><a href="index.php?act=khachhang">Tài khoản</a></li>
                             <li><a href="index.php?act=binhluan">Bình luận</a></li>
+                            <li><a href="index.php?act=donhang">Đơn hàng</a></li>
                             <li><a href="index.php?act=thongke">Thống kê</a></li>
                             <li><a href="../index.php?act=dangnhap">Đăng nhập</a></li>
                         </ul>

@@ -101,14 +101,8 @@ if (isset($_GET['act'])) {
 
     // đây là tìm và đặt phòng
     case 'timphongtrong':
-      if(isset($_POST['datphong']) && ($_POST['datphong'])){
-        $checkuser = dang_nhap($user_name, $password);
-        if(is_array($checkuser)){
-            $_SESSION['user_name'] = $checkuser;
-            // header('location:index.php');
-          }else{
-              echo 'Bạn cần đăng nhập để đặt phòng!';
-         } 
+      if(isset($_GET['id'])){
+        $_SESSION['phong'] = loadone_phong($_GET['id']);
       }
       include 'views/timphongtrong.php';
       break;
@@ -118,18 +112,37 @@ if (isset($_GET['act'])) {
             $telephone = $_SESSION['user_name']['telephone'];
             $email = $_SESSION['user_name']['email'];
             $address = $_SESSION['user_name']['address'];
-            $total_price = $_POST['price'];
             $checkin = $_POST['checkin'];
             $checkout = $_POST['checkout'];
             $nguoi_lon = $_POST['nguoi_lon'];
             $tre_em = $_POST['tre_em'];
-            booking ($full_name, $telephone, $email, $address, $total_price, $checkin, $checkout, $nguoi_lon, $tre_em); ?>
+            $total_price = $_SESSION['phong']['price'];
+            if($checkin < $checkout ){
+              booking ($full_name, $telephone, $email, $address, $checkin, $checkout, $nguoi_lon, $tre_em, $total_price); ?>
+              <script>
+                alert("Mời bạn thanh toán để xác nhận đặt hàng!");
+              </script>
+
+          <?php
+          }else{ ?>
             <script>
-              alert("Đặt phòng thành công!");
-            </script>
-       <?php }
-        include "views/thanhtoan.php";
+                alert("Vui lòng nhập đúng thông tin!");
+              </script>
+              <?php 
+                include "views/timphongtrong.php"; 
+              }
+              include "views/thanhtoan.php";
         break;
+            }
+        
+        case 'xacnhan':
+          if(isset($_GET['id']) && ($_GET['id']>0)){
+            $id = $_GET['id'];
+            $donhang = load_donhang($id);
+            extract ($donhang);
+          }
+          include 'views/thanhtoan.php';
+          break;
     case 'amthuc':
         include 'views/amthuc.php';
         break;

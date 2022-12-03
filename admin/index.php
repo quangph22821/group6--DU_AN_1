@@ -5,8 +5,10 @@ include "../model/taikhoan.php";
 include "../model/loaiphong.php";
 include "../model/phong.php";
 include "../model/binhluan.php";
+include "../model/datphong.php";
 include_once "header.php";
 $listphong = loadall_phong();
+$listdonhang = loadall_donhang();
 // controller
 if (isset($_GET['act'])) {
   $act = $_GET['act'];
@@ -27,7 +29,10 @@ if (isset($_GET['act'])) {
         $listloaiphong = loadall_loaiphong(); 
         include 'loaiphong/danhsach.php';
         break;
-
+    case 'donhang':
+      $listdonhang = loadall_donhang();
+      include 'donhang/danhsach.php';
+      break;
     case 'delete':
       if(isset($_GET['id']) && ($_GET['id'] > 0)){
         delete_loaiphong($_GET['id']);

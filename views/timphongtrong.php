@@ -36,40 +36,46 @@
                 }
             ?>
             <div class="timphong">
-                <input type="text" value= "<?= $name ?>">
+                <input type="hidden" value= "<?= $name ?>">
             </div>
             <div class="timphong">
-                <input type="text" value= "<?= $address ?>">
+                <input type="hidden" value= "<?= $address ?>">
             </div>
             <div class="timphong">
-                <input type="text" value= "<?= $telephone ?>">
+                <input type="hidden" value= "<?= $telephone ?>">
             </div>
             <div class="timphong">
-                <input type="text" value= "<?= $email ?>">
+                <input type="hidden" value= "<?= $email ?>">
+            </div>
+            <?php $_SESSION['phong'];
+                extract($_SESSION['phong']);
+            ?>
+            <div class="timphong">
+                <input type="hidden" name="price" value="<?= $price ?>">
             </div>
             <div class="timphong">
                 <label for="">Ngày vào</label><br>
-                <input type="date" name="checkin">
+                <input type="date" name="checkin" require>
             </div>
             <div class="timphong">
                 <label for="">Ngày ra</label><br>
-                <input type="date" name="checkout">
+                <input type="date" name="checkout" require>
             </div>
             <div class="timphong">
                 <label for="">Người lớn</label><br>
-                <input type="number" name="nguoi_lon" id="" min="1">
+                <input type="number" name="nguoi_lon" min="1" require>
             </div>
             <div class="timphong">
                 <label for="">Trẻ em</label><br>
-                <input type="number" name="tre_em" id="" min="1">
+                <input type="number" name="tre_em" min="1" require>
             </div>
            <div class="checktrong">
-                <a href="./index.php?act=thanhtoan"><input type="submit" name="thanhtoan" class="btn" value="Đặt phòng"></a>
+                <input type="submit" name="thanhtoan" class="btn" value="Thanh toán">
            </div>
            
         </form>
     </div>
 </div>
 <?php }else{  
-     echo' <h3>Vui lòng đăng nhập để đặt phòng!</h3>';
+     echo' <h3>Vui lòng đăng nhập hoặc đăng ký để đặt phòng!</h3>';
  } ?>

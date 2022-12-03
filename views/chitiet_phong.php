@@ -56,12 +56,6 @@
                 <h3>Vật nuôi</h3>
                 <p>Vật nuôi không được phép</p>
             </div>
-            <div class="title">
-                <h3>Trẻ em và giường phụ</h3>
-                <p>Trẻ em được chào đón Trẻ em được ở miễn phí! Trẻ em được ở miễn phí khi sử dụng giường có sẵn;
-                    trẻ em có thể không đủ điều kiện nhận bữa sáng miễn phí Có sẵn giường gấp / giường phụ với phụ phí $ 10 mỗi ngày.
-                </p>
-            </div>
             <div class="bookk">
                 <a href="./index.php?act=timphongtrong&id=<?=$id?>"><input class="ddd" name="datphong" type="submit" value="Đặt phòng" style=" cursor: pointer; background-color: #AB8A62;
             width: 150px;
@@ -106,19 +100,6 @@
                 <i class="fa-solid fa-chart-area"></i>45m2
             </div>
             
-            <!-- <form action="binhluan" method="post"> -->
-
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-            <script>
-                $(document).ready(function(){
-                    $("#binhluan").load("./views/binhluanform.php", {idphong: <?=$id?>});
-                });
-
-            
-
-            </div>
-
-        <!-- </form> -->
 
         
         </div>

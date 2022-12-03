@@ -14,7 +14,7 @@
                             <a href="./index.php?act=chitietphong&id=<?=$value['id']?>"><img src="./upload/<?= $value['image'] ?>" alt="" width="380px" height="506.67px"></a>
                         </div>
                         <div class="book">
-                            <a href=""><button>Đặt phòng</button></a>
+                            <a href="./index.php?act=timphongtrong"><button>Đặt phòng</button></a>
                         </div>
                         <div class="gia">
 
