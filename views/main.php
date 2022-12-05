@@ -59,7 +59,7 @@
                     </div>
                     <?php endforeach ?> 
                 </div>
-                <!-- <div class="products_2">
+                <div class="products_2">
                     <div class="rooms">
                         <div class="img">
                             <a href=""><img src="./img/5.jpg" alt="" width="578px"></a>
@@ -84,7 +84,7 @@
                         </div>
                     </div>
                     
-                    </div> -->
+                    </div>
             </div>
         </section>
         <section class="kham_pha">

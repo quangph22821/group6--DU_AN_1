@@ -27,11 +27,12 @@ function loadone_phong($id){
     $lp = pdo_query_one($sql);
     return $lp;
 }
-function update_phong($id, $tenphong){
-    $sql = "UPDATE room_type SET room_name = '$tenphong' where id = '$id'";
+function update_phong($idlp,$tenphong,$giaphong,$filename,$mota,$id){
+    if ($filename!="") 
+        $sql="UPDATE room_type set ID_lp='".$idlp."',room_name='".$tenphong."',price='".$giaphong."',image='".$filename."',description='".$mota."' where id=".$id;
+    else
+    $sql="UPDATE room_type set ID_lp='".$idlp."',room_name='".$tenphong."',price='".$giaphong."',description='".$mota."' where id=".$id;
     pdo_execute($sql);
-
-    
 }
  function phong1($id){
 $sql="SELECT * FROM room_type where id='$id'";

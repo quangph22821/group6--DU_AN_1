@@ -40,7 +40,7 @@
                 } ?>
                 </td>`
             <td>
-                 <a href="./index.php?act=xoa_taikhoan&id=<?=$value['id']?>">Xóa</a>
+                 <a href="./index.php?act=xoa_taikhoan&id=<?=$value['id']?>"style="text-decoration: none; color: #AB8A62;"><i class="fa-solid fa-trash"></i></a>
             </td>
             </tr>
             <?php endforeach ?>

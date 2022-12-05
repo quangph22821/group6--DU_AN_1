@@ -53,9 +53,9 @@ $sql = "SELECT * FROM room_type ORDER BY id DESC";
                             <td><?=$value['price'] ?></td>
                             <td><?=$value['description'] ?></td>
                             <td>
-                                <button class="btn btn-default"><a href="?act=suaphong&id=<?=$value['id'] ?>" >Sửa</a></button>
-                                <button class="btn btn-danger"><a href="?act=xoaphong&id=<?=$value['id']?>" 
-                                onclick="return confirm('Bạn Có Muốn Xóa Không?')">Xóa</a></button>
+                                <button class="btn btn-default" style="border: none; color: #AB8A62;"><a href="?act=suaphong&id=<?=$value['id'] ?>" ><i class="fa-solid fa-wrench"></i></a></button>
+                                <button class="btn btn-danger" style="border: none;><a href="?act=xoaphong&id=<?=$value['id']?>" 
+                                onclick="return confirm('Bạn Có Muốn Xóa Không?')"><i class="fa-solid fa-trash"></i></a></button>
                             </td>
                         </tr>
                     <?php endforeach ?>

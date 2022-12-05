@@ -29,10 +29,6 @@ if (isset($_GET['act'])) {
         $listloaiphong = loadall_loaiphong(); 
         include 'loaiphong/danhsach.php';
         break;
-    case 'donhang':
-      $listdonhang = loadall_donhang();
-      include 'donhang/danhsach.php';
-      break;
     case 'delete':
       if(isset($_GET['id']) && ($_GET['id'] > 0)){
         delete_loaiphong($_GET['id']);
@@ -129,7 +125,7 @@ if (isset($_GET['act'])) {
         if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
         } else {
         }
-        update_phong($idlp, $tenphong, $giaphong, $mota, $filename, $id);
+        update_phong($idlp,$tenphong,$giaphong,$filename,$mota,$id);
         $thongbao = "Cập Nhật  Thành Công";
       }
       $listloaiphong = loadall_loaiphong();
@@ -137,6 +133,18 @@ if (isset($_GET['act'])) {
       include_once "phong/danhsach.php";
 
       break;
+      // đây là của đơn hàng
+      case 'donhang':
+        $listdonhang = loadall_donhang();
+        include 'donhang/danhsach.php';
+        break;
+      case 'xoa_donhang':
+        if(isset($_GET['id']) && ($_GET['id'] > 0)){
+          delete_donhang($_GET['id']);
+        }
+        $listdonhang = loadall_donhang();
+        include 'donhang/danhsach.php';
+        break;
     // đây là của khách hàng
     case 'khachhang':
       $listtaikhoan = loadall_taikhoan(); 

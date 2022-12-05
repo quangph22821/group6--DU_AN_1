@@ -136,13 +136,13 @@ if (isset($_GET['act'])) {
           include 'views/thanhtoan.php';
           break;
         case 'thanhtoan_thanhcong':
-          if(isset($_POST['thanhcong']) && ($_POST['thanhcong'])) {
-            
-              echo "cám ơn bạn đã sử dụng dịch vụ của chúng tôi";
-            
-          
-          }
-         include 'views/thanhtoan.php';
+          if(isset($_POST['thanhcong']) && ($_POST['thanhcong'])) { ?>
+             
+             <script>
+                alert("Cám ơn bạn đã sử dụng dịch vụ của chúng tôi!");
+              </script>
+           <?php }
+         include 'views/main.php';
           
             break;
     case 'amthuc':

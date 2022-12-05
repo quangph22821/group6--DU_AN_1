@@ -15,7 +15,6 @@
                 <td>Mã loại</td>
                 <td>Tên loại</td>
                 <td>Hành động</td>
-                <td>Chức năng</td>
             </tr>
 
             <?php foreach ($listloaiphong as $key => $value): {
@@ -26,8 +25,8 @@
                 <td><?=$value['name_room']?></td>
             <td>  
                 
-                 <a href="?act=delete&id=<?=$value['id']?>" style="text-decoration: none;">Xóa</a>
-                 <a href="index.php?act=sua&id=<?=$value['id']?>"style="text-decoration: none;">Sửa</a>
+                 <a href="?act=delete&id=<?=$value['id']?>" style="text-decoration: none; color: #AB8A62; margi -right: 5px"><i class="fa-solid fa-trash"></i></a>
+                 <a href="index.php?act=sua&id=<?=$value['id']?>"style="text-decoration: none; color: #AB8A62;"><i class="fa-solid fa-wrench"></i></a>
             </td>
             </tr>
             <?php endforeach ?>

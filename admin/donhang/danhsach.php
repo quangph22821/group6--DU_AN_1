@@ -8,7 +8,6 @@
     <title>Danh sách loại phòng</title>
 </head>
 <body>
-    <a href="index.php?act=them" style=""><input type="button" value="Nhập thêm"></a>
     <div class="danh_sach" >
         <table border='1'>
             <tr>
@@ -41,8 +40,8 @@
                 <td><?=$value['trang_thai']?></td>
             <td>  
                 
-                 <a href="?act=delete&id=<?=$value['id']?>" style="text-decoration: none;">Xóa</a>
-                 <a href="index.php?act=sua&id=<?=$value['id']?>"style="text-decoration: none;">Sửa</a>
+                 <a href="?act=xoa_donhang&id=<?=$value['id']?>" style="text-decoration: none; color: #AB8A62;; margin-right: 5px"><i class="fa-solid fa-trash"></i></a>
+                 <a href="index.php?act=sua&id=<?=$value['id']?>"style="text-decoration: none; color: #AB8A62;"><i class="fa-solid fa-wrench"></i></a>
             </td>
             </tr>
             <?php endforeach ?>
