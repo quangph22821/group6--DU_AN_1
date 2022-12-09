@@ -5,6 +5,7 @@ include "./model/taikhoan.php";
 include "./model/phong.php";
 include "./model/binhluan.php";
 include "./model/datphong.php";
+include "./model/tin_tuc.php";
 include_once "views/header.php";
 // controller
   $listphong = loadall_phong();
@@ -145,12 +146,32 @@ if (isset($_GET['act'])) {
          include 'views/main.php';
           
             break;
+    // tin tức
+    case 'tintuc':
+      $load_all_tin_tuc = load_tin_tuc();
+      include 'views/tintuc.php';
+      break;
+      
+    case 'chitiettintuc':
+      if(isset($_GET['id']) && ($_GET['id']>0)){
+        $id = $_GET['id'];
+        $one_chi_tiet = load_one_tin_tuc($id);
+        extract ($one_chi_tiet);
+        // include 'views/chitiet_tintuc.php';
+      }else{
+        include 'views/main.php';
+      }
+
+      $one_chi_tiet = load_one_tin_tuc($id);
+      include 'views/chitiet_tintuc.php';
+      break;
+    //
     case 'amthuc':
         include 'views/amthuc.php';
         break;
-    case 'tintuc':
-      include 'views/tintuc.php';
-      break;
+    // case 'tintuc':
+    //   include 'views/tintuc.php';
+    //   break;
     case 'chitiettintuc':
       include 'views/chitiet_tintuc.php';
       break;

@@ -6,6 +6,8 @@ include "../model/loaiphong.php";
 include "../model/phong.php";
 include "../model/binhluan.php";
 include "../model/datphong.php";
+include "../model/thongke.php";
+include "../model/tin_tuc.php";
 include_once "header.php";
 $listphong = loadall_phong();
 $listdonhang = loadall_donhang();
@@ -171,10 +173,72 @@ if (isset($_GET['act'])) {
       $listbinhluan = loadall_binhluan("", 0);
       include "binhluan/danhsach.php";
       break;
-          //
-    case 'tintuc':
-      include 'tintuc.php';
+          //thống kê
+    
+    case 'thongke':
+      $listthongke = loadall_thongke();
+      include "thongke/danhsach.php";
       break;
+    
+    case 'thongkedanhmuc':
+      $thongkedt = loadtk_doanhthu();
+      include "thongke/tkdoanhthu.php";
+      break;
+
+    // tin tức
+
+    case 'addtintuc':
+      if (isset($_POST['add']) && ($_POST['add'])) {
+        $tieu_de = $_POST['tieu_de'];
+        $mo_ta = $_POST['mo_ta'];
+        $hinh_anh = $_FILES['hinh_anh']['name'];
+        $ngay_them = $_POST['ngay_them'];
+        $target_dir = "../upload/";
+        $target_file = $target_dir . basename($_FILES["hinh_anh"]["name"]);
+        if (move_uploaded_file($_FILES["hinh_anh"]["tmp_name"], $target_file)) {
+        } else {
+        }
+        insert_tin_tuc($tieu_de,$mo_ta,$hinh_anh,$ngay_them);
+        $thongbao = "Thêm Thành Công";
+      }
+      $list_tin_tuc= load_tin_tuc();
+      include_once "khampha/them.php";
+      break;
+    
+    case 'deltintuc':
+      if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+        delete_tin_tuc($_GET['id']);
+      }
+      $list_tin_tuc = load_tin_tuc();
+      
+      include 'khampha/danhsach.php';
+      break;
+
+    case 'edittintuc':
+      if (isset($_POST['update']) && ($_POST['update'])) {
+        $tieu_de =$_POST['tieu_de'];
+        $mo_ta =$_POST['mo_ta'];
+        $id =$_POST['id'];
+        $hinh_anh =$_FILES['hinh_anh']['name'];
+        $ngay_them =$_POST['ngay_them'];
+        $target_dir = "../upload/";
+        $target_file = $target_dir . basename($_FILES["hinh_anh"]["name"]);
+        if (move_uploaded_file($_FILES["hinh_anh"]["tmp_name"], $target_file)) {
+        } else {
+
+        }
+        update_tin_tuc($id,$tieu_de,$mo_ta,$hinh_anh,$ngay_them);
+      }
+      $id = $_GET['id'];
+      $tin_tuc = load_one_tin_tuc($id);
+      $list_tin_tuc = load_tin_tuc();
+
+      include 'khampha/sua.php';
+      break;
+      $listtaikhoan = loadall_taikhoan(); 
+      include 'khachhang/danhsach.php';
+      break;
+      //
     case 'uudai':
       include 'uudai.php';
       break;

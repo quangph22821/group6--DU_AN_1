@@ -64,8 +64,8 @@
             </div>
             <div class="timphong">
                 <label for="">Phương thức thanh toán</label><br>
-                <input type="radio">Thanh toán tiền mặt
-                <input type="radio">Chuyển khoản ngân hàng
+                <input type="radio" name="thanhtoan">Thanh toán tiền mặt
+                <input type="radio" name="thanhtoan">Chuyển khoản ngân hàng
             </div>
            <div class="checktrong">
                 <input type="submit" name="thanhcong" class="btn" value="Thanh toán">

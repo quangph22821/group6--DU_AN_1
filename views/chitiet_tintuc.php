@@ -1,4 +1,4 @@
-<div class="tintuc_all">
+<!-- <div class="tintuc_all">
     <div class="chitiet_tintuc">
         <img src="./img/2.jpg" alt="">
         <h2>Giao thoa ẩm thực Á Âu</h2>
@@ -22,5 +22,15 @@
             <div class="lienquan_tieude">
                 <a href=""> <h3>Những lợi ích từ Spa</h3></a>
             </div>
+    </div>
+</div> -->
+<div class="tintuc_all">
+      <?php extract ($one_chi_tiet)?>
+    <div class="chitiet_tintuc">
+    <img src="./upload/<?= $hinh_anh?>" alt="" width="200px">
+        <h2><?=$tieu_de ?></h2>
+        <p>
+            <?=$mo_ta ?>
+        </p>
     </div>
 </div>
